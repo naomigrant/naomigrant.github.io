@@ -8,8 +8,7 @@
 /.bundle
 
 # Ignore the build directory
-# Don't for Github pages
-#/build
+/build
 
 # Ignore cache
 /.sass-cache
