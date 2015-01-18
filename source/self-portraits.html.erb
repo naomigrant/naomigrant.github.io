@@ -1,0 +1,50 @@
+---
+title: Self-Portraits
+page_ref: self-portraits
+images:
+  -
+    filename: portraits/self_portraits/self_portrait_in_studio
+    caption: Self-portrait in Studio
+    orientation: portrait
+  - 
+    filename: portraits/self_portraits/self_portrait_I
+    caption: Self-portrait I
+    orientation: portrait
+  - 
+    filename: portraits/self_portraits/self_portrait_V
+    caption: Self-portrait V
+    orientation: portrait
+  - 
+    filename: portraits/self_portraits/self
+    caption: Self
+    orientation: portrait
+  - 
+    filename: portraits/self_portraits/self_portrait_VI
+    caption: Self-portrait VI
+    orientation: portrait
+  - 
+    filename: portraits/self_portraits/self_portrait_IV
+    caption: Self-portrait IV
+    orientation: portrait
+  - 
+    filename: portraits/self_portraits/self_portrait_III
+    caption: Self-portrait III
+    orientation: portrait
+  - 
+    filename: portraits/self_portraits/self_portrait
+    caption: Self-portrait
+    orientation: portrait
+  - 
+    filename: portraits/self_portraits/self_portrait_at_easel
+    caption: Self-portrait at Easel
+    orientation: portrait
+---
+<section id="<%= current_page.data.page_ref %>">
+  <h1><%= current_page.data.title %></h1>
+  <div class="popup-gallery">
+    <% current_page.data.images.each do |img| %>
+      <%= link_to image_tag(img['filename'] + '_small.jpg', :class => img['orientation']), 
+      'img/' + img['filename'] + '_large.jpg', class: 'swipebox', title: img['caption'] %>
+    <% end %>
+  </div>
+</section>

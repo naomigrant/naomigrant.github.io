@@ -1,0 +1,30 @@
+---
+title: Still Lifes
+page_ref: still-lifes
+images:
+  -
+    filename: still_lifes/italian_still_life
+    caption: Italian Still Life
+    orientation: landscape
+  - 
+    filename: still_lifes/still_life_with_bird
+    caption: Still Life with Bird
+    orientation: landscape
+  - 
+    filename: still_lifes/roman_still_life
+    caption: Roman Still Life
+    orientation: landscape
+  - 
+    filename: still_lifes/roman_birds
+    caption: Roman Birds
+    orientation: landscape
+---
+<section id="<%= current_page.data.page_ref %>">
+  <h1><%= current_page.data.title %></h1>
+  <div class="popup-gallery">
+    <% current_page.data.images.each do |img| %>
+      <%= link_to image_tag(img['filename'] + '_small.jpg', class: img['orientation']), 
+      'img/' + img['filename'] + '_large.jpg', class: 'swipebox', title: img['caption'] %>
+    <% end %>
+  </div>
+</section>

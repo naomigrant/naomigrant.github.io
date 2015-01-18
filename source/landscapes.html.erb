@@ -1,0 +1,42 @@
+---
+title: Landscapes
+page_ref: landscapes
+images:
+  -
+    filename: landscapes/view_from_lybster_I
+    caption: View from Lybster I
+    orientation: landscape
+  - 
+    filename: landscapes/view_from_lybster_II
+    caption: View from Lybster II
+    orientation: landscape
+  - 
+    filename: landscapes/view_from_lybster_IV
+    caption: View from Lybster IV
+    orientation: landscape
+  - 
+    filename: landscapes/view_from_lybster_V
+    caption: View from Lybster V
+    orientation: landscape
+  - 
+    filename: landscapes/view_from_pontignano_1
+    caption: View from Pontignano 1
+    orientation: landscape
+  - 
+    filename: landscapes/view_from_pontignano_2
+    caption: View from Pontignano 2
+    orientation: landscape
+  - 
+    filename: landscapes/view_from_rome
+    caption: View from Rome
+    orientation: landscape
+---
+<section id="<%= current_page.data.page_ref %>">
+  <h1><%= current_page.data.title %></h1>
+  <div class="popup-gallery">
+    <% current_page.data.images.each do |img| %>
+      <%= link_to image_tag(img['filename'] + '_small.jpg', class: img['orientation']), 
+      'img/' + img['filename'] + '_large.jpg', class: 'swipebox', title: img['caption'] %>
+    <% end %>
+  </div>
+</section>

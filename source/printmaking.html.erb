@@ -1,0 +1,162 @@
+---
+title: Printmaking
+page_ref: printmaking
+sections:
+  -
+    name: Pandosto
+    images:
+      -
+        filename: printmaking/pandosto/arrival
+        caption: Arrival
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/bohemia
+        caption: Bohemia
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/departure
+        caption: Departure
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/fawnia
+        caption: Fawnia
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/sky
+        caption: Sky
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/storm_at_sea
+        caption: Storm at Sea
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/the_brook
+        caption: The Brook
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/the_declaration
+        caption: The Declaration
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/the_flock
+        caption: The Flock
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/the_lake_i
+        caption: The Lake I
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/the_lake_ii
+        caption: The Lake II
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/the_observer
+        caption: The Observer
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/the_return_i
+        caption: The Return I
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/the_return_ii
+        caption: The Return II
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/the_shepherdess
+        caption: The Shepherdess
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/tragic_strategem
+        caption: Tragic Strategem
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/twilight
+        caption: Twilight
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/two_riders
+        caption: Two Riders
+        orientation: portrait
+      -
+        filename: printmaking/pandosto/young_lovers
+        caption: Young Lovers
+        orientation: portrait
+  -
+    name: Four Times of Day (After Corot)
+    images:
+      -
+        filename: printmaking/four_times_of_day_(after_corot)/after_corot_1
+        caption: After Corot 1
+        orientation: portrait
+      -
+        filename: printmaking/four_times_of_day_(after_corot)/after_corot_2
+        caption: After Corot 2
+        orientation: portrait
+      -
+        filename: printmaking/four_times_of_day_(after_corot)/after_corot_3
+        caption: After Corot 3
+        orientation: portrait
+      -
+        filename: printmaking/four_times_of_day_(after_corot)/after_corot_4
+        caption: After Corot 4
+        orientation: portrait
+  -
+    name: Paraphrase of the Penitential Psalms
+    images:
+      -
+        filename: printmaking/paraphrase_of_the_penitential_psalms/p1020093
+        caption: ''
+        orientation: landscape
+      -
+        filename: printmaking/paraphrase_of_the_penitential_psalms/paraphrase_of_the_penitential_psalms_i_(detail_i)
+        caption: Paraphrase of the Penitential Psalms I (Detail I)
+        orientation: landscape
+      -
+        filename: printmaking/paraphrase_of_the_penitential_psalms/paraphrase_of_the_penitential_psalms_i_(detail_ii)
+        caption: Paraphrase of the Penitential Psalms I (Detail II)
+        orientation: landscape
+      -
+        filename: printmaking/paraphrase_of_the_penitential_psalms/paraphrase_of_the_penitential_psalms_i_(detail_iii)
+        caption: Paraphrase of the Penitential Psalms I (Detail III)
+        orientation: landscape
+      -
+        filename: printmaking/paraphrase_of_the_penitential_psalms/paraphrase_of_the_penitential_psalms_ii_(detail_i)
+        caption: Paraphrase of the Penitential Psalms II (Detail I)
+        orientation: landscape
+      -
+        filename: printmaking/paraphrase_of_the_penitential_psalms/paraphrase_of_the_penitential_psalms_ii_(detail_ii)
+        caption: Paraphrase of the Penitential Psalms II (Detail II)
+        orientation: landscape
+      -
+        filename: printmaking/paraphrase_of_the_penitential_psalms/paraphrase_of_the_penitential_psalms_ii_(detail_iii)
+        caption: Paraphrase of the Penitential Psalms II (Detail III)
+        orientation: landscape
+      -
+        filename: printmaking/paraphrase_of_the_penitential_psalms/paraphrase_of_the_penitential_psalms_iii_(detail_i)
+        caption: Paraphrase of the Penitential Psalms III (Detail I)
+        orientation: landscape
+      -
+        filename: printmaking/paraphrase_of_the_penitential_psalms/paraphrase_of_the_penitential_psalms_iii_(detail_ii)
+        caption: Paraphrase of the Penitential Psalms III (Detail II)
+        orientation: landscape
+      -
+        filename: printmaking/paraphrase_of_the_penitential_psalms/paraphrase_of_the_penitential_psalms_iv_(detail_i)
+        caption: Paraphrase of the Penitential Psalms IV (Detail I)
+        orientation: landscape
+      -
+        filename: printmaking/paraphrase_of_the_penitential_psalms/paraphrase_of_the_penitential_psalms_iv_(detail_ii)
+        caption: Paraphrase of the Penitential Psalms IV (Detail II)
+        orientation: landscape
+---
+<section id="<%= current_page.data.page_ref %>">
+  <h1><%= current_page.data.title %></h1>
+    <% current_page.data.sections.each do |section| %>
+    <h2><%= section.name %></h2>
+    <div class="popup-gallery">
+      <% section.images.each do |img| %>
+        <%= link_to image_tag(img['filename'] + '_small.jpg', class: img['orientation']), 
+        'img/' + img['filename'] + '_large.jpg', class: 'swipebox', title: img['caption'] %>
+      <% end %>
+    </div>
+  <% end %>
+</section>
