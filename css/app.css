@@ -1,0 +1,203 @@
+/* Typekit - prevent text flash before load (http://help.typekit.com/customer/portal/articles/6852) */
+/* line 3, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+.wf-loading h1 {
+  visibility: hidden; }
+
+/* line 4, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+.wf-active h1 {
+  visibility: visible; }
+
+/* line 6, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+body#page-home {
+  background: #605e60; }
+  /* line 9, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+  body#page-home header {
+    background: #454345; }
+  /* line 11, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+  body#page-home #main h1, body#page-home #main h2 {
+    color: #c1c1c1; }
+
+/* line 17, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+body#page-self-portraits {
+  background: #605e60; }
+  /* line 20, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+  body#page-self-portraits header {
+    background: #454345; }
+  /* line 22, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+  body#page-self-portraits #main h1, body#page-self-portraits #main h2 {
+    color: #c1c1c1; }
+
+/* line 28, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+body#page-still-lifes {
+  background: #717e84; }
+  /* line 31, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+  body#page-still-lifes header {
+    background: #454345; }
+  /* line 33, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+  body#page-still-lifes #main h1, body#page-still-lifes #main h2 {
+    color: #f0f0f0; }
+
+/* line 39, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+body#about {
+  background: #cacaca; }
+
+/* line 43, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+body#page-landscapes {
+  background: #464c4d; }
+  /* line 46, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+  body#page-landscapes header {
+    background: #454345; }
+  /* line 48, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+  body#page-landscapes #main h1, body#page-landscapes #main h2 {
+    color: #c1c1c1; }
+
+/* line 55, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+body {
+  background: #e5e5e5;
+  margin: 0;
+  color: #555;
+  font-family: "chaparral-pro"; }
+  /* line 61, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+  body header {
+    /*  position: fixed;
+      top: 0;
+    */
+    width: 100%;
+    min-height: 80px;
+    color: #ddd;
+    background: #364246; }
+    /* line 69, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+    body header .centred {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 15px; }
+    /* line 75, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+    body header h1 {
+      font-size: 32px;
+      font-family: "chaparral-pro";
+      font-weight: normal;
+      color: white;
+      margin: 0 60px 0 0;
+      padding-top: 3px;
+      float: left; }
+    /* line 85, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+    body header nav {
+      margin-top: 6px;
+      float: left; }
+      @media (min-width: 825px) {
+        /* line 85, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+        body header nav {
+          width: 750px; } }
+      @media (max-width: 824px) {
+        /* line 85, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+        body header nav {
+          width: 100%; } }
+      /* line 91, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+      body header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        /* line 96, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+        body header nav ul li.selected a,
+        body header nav ul li a:hover {
+          background: #333; }
+        /* line 101, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+        body header nav ul li {
+          display: block;
+          float: left;
+          padding: .6em 0;
+          margin-right: 15px; }
+          /* line 107, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+          body header nav ul li a {
+            color: #ddd;
+            text-decoration: none;
+            padding: .6em .7em;
+            font-size: 17px; }
+  /* line 119, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+  body #main {
+    width: 80%;
+    margin: 50px auto; }
+    /* line 123, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+    body #main .centered {
+      text-align: center; }
+      @media (min-width: 601px) {
+        /* line 126, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+        body #main .centered img {
+          width: 600px; } }
+      @media (max-width: 600px) {
+        /* line 126, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+        body #main .centered img {
+          width: 100%; } }
+    /* line 131, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+    body #main .large {
+      font-size: 1.2em; }
+    /* line 133, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+    body #main a,
+    body #main a:hover {
+      color: #555;
+      text-decoration: none; }
+    /* line 139, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+    body #main a:hover {
+      text-decoration: underline; }
+    /* line 143, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+    body #main img {
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
+      margin: 3% 1%; }
+    @media (min-width: 321px) {
+      /* line 148, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+      body #main img.landscape {
+        width: 240px; } }
+    @media (max-width: 320px) {
+      /* line 148, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+      body #main img.landscape {
+        width: 100%; } }
+    @media (min-width: 321px) {
+      /* line 153, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+      body #main img.portrait {
+        height: 300px; } }
+    @media (max-width: 320px) {
+      /* line 153, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+      body #main img.portrait {
+        width: 100%; } }
+    /* line 158, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+    body #main h1, body #main h2 {
+      color: #444;
+      text-align: center;
+      font-weight: normal; }
+    /* line 164, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+    body #main h1 {
+      font-size: 24px; }
+    /* line 168, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+    body #main h2 {
+      font-size: 17px; }
+    /* line 172, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+    body #main ul.top_level {
+      padding-left: 0;
+      position: relative; }
+      /* line 177, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+      body #main ul.top_level li .item {
+        font-size: 19px;
+        font-weight: bold; }
+      /* line 181, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+      body #main ul.top_level li .value {
+        position: absolute;
+        left: 15%;
+        top: 4px; }
+    /* line 189, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+    body #main ul {
+      padding-left: 15%;
+      list-style: none;
+      margin-bottom: 5%; }
+      /* line 195, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+      body #main ul li {
+        list-style-type: none;
+        margin: 15px 0; }
+        /* line 199, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+        body #main ul li .date {
+          width: 150x;
+          float: left;
+          margin-right: 5%; }
+        /* line 205, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
+        body #main ul li .address {
+          float: left;
+          width: 500px; }
