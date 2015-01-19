@@ -40,12 +40,12 @@
           <nav class="clearfix">
             <ul>
               <li <%= current_page.data.page_ref == 'home' ? 'class="selected"' : '' %>><%= link_to 'Home', '/' %></li>
-              <li <%= current_page.data.page_ref == 'bio' ? 'class="selected"' : '' %>><%= link_to 'Bio', '/bio.html' %></li>
               <li <%= current_page.data.page_ref == 'landscapes' ? 'class="selected"' : '' %>><%= link_to 'Landscapes', '/landscapes.html' %></li>
               <li <%= current_page.data.page_ref == 'self-portraits' ? 'class="selected"' : '' %>><%= link_to 'Self-Portraits', '/self-portraits.html' %></li>
               <li <%= current_page.data.page_ref == 'still-lifes' ? 'class="selected"' : '' %>><%= link_to 'Still Lifes', '/still-lifes.html' %></li>
               <li <%= current_page.data.page_ref == 'printmaking' ? 'class="selected"' : '' %>><%= link_to 'Printmaking', '/printmaking.html' %></li>
-            <li <%= current_page.data.page_ref == 'contact' ? 'class="selected"' : '' %>><%= link_to 'Contact', '/contact.html' %></li>
+              <li <%= current_page.data.page_ref == 'bio' ? 'class="selected"' : '' %>><%= link_to 'Bio', '/bio.html' %></li>
+              <li <%= current_page.data.page_ref == 'contact' ? 'class="selected"' : '' %>><%= link_to 'Contact', '/contact.html' %></li>
             </ul>
           </nav>
         </section>
