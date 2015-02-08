@@ -3,10 +3,10 @@
 .wf-active h1 { visibility: visible; }
 
 body#page-home {
-  background: #605e60;
+  background: #454345;
 
-  header { background: #454345; }
   #main {
+    background: #605e60;
     h1, h2 {
       color: #c1c1c1;
     }
@@ -14,10 +14,10 @@ body#page-home {
 }
 
 body#page-self-portraits {
-  background: #605e60;
+  background: #454345;
 
-  header { background: #454345; }
   #main {
+    background: #605e60;
     h1, h2 {
       color: #c1c1c1;
     }
@@ -25,10 +25,9 @@ body#page-self-portraits {
 }
 
 body#page-still-lifes {
-  background: #717e84;
-
-  header { background: #454345; }
+  background: #454345;
   #main {
+    background: #717e84;
     h1, h2 {
       color: #f0f0f0;
     }
@@ -36,14 +35,15 @@ body#page-still-lifes {
 }
 
 body#about {
-  background: #cacaca;
+  #main {
+    background: #cacaca;
+  }
 }
 
 body#page-landscapes {
-  background: #464c4d;
-
-  header { background: #454345; }
+  background: #454345;
   #main {
+    background: #464c4d;
     h1, h2 {
       color: #c1c1c1;
     }
@@ -52,18 +52,16 @@ body#page-landscapes {
 
 
 body {
-  background: #e5e5e5;
+  background: #364246;
+
   margin: 0;
   color: #555;
   font-family: "chaparral-pro";
 
   header {
-  /*  position: fixed;
-    top: 0;
-  */  width: 100%;
+    width: 100%;
     min-height: 80px;
     color: #ddd;
-    background: #364246;
 
     .centred {
       width: 80%;
@@ -116,10 +114,17 @@ body {
   }
 
   #main {
-    width: 80%;
-    margin: 50px auto;
+    background: #e5e5e5;
+
+    .content {
+      width: 80%;
+      margin: 0 auto;
+      padding: 34px 0 150px 0;
+    }
+
 
     .centered {
+      margin-top: 16px;
       text-align: center;
 
       img { 
@@ -209,4 +214,16 @@ body {
 
   }
 
+
+  footer {
+    width: 100%;
+    min-height: 50px;
+    color: #ddd;
+
+    .centred {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 15px;
+    }
+  }
 }
