@@ -17,7 +17,7 @@ $(document).ready(function() {
   var username = "naomi.grant87";
   var hostname = "googlemail.com";
   var linktext = username + "@" + hostname ;
-  $('.email').html("<a href='" + "mail" + "to:" + linktext + "@" + hostname + "'>" + linktext + "</a>");
+  $('.email').html("<a href='" + "mail" + "to:" + linktext + "'>" + linktext + "</a>");
 
 
   $('.popup-gallery').magnificPopup({
