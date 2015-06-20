@@ -73,17 +73,13 @@ body {
       font-family: "chaparral-pro";
       font-weight: normal;
       color: white;
-      margin: 0 60px 0 0;
+      margin: 0 35px 0 0;
       padding-top: 3px;
       float: left; }
     /* line 83, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
     body header nav {
       margin-top: 6px;
       float: left; }
-      @media (min-width: 825px) {
-        /* line 83, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
-        body header nav {
-          width: 750px; } }
       @media (max-width: 824px) {
         /* line 83, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
         body header nav {
@@ -102,7 +98,7 @@ body {
           display: block;
           float: left;
           padding: .6em 0;
-          margin-right: 15px; }
+          margin-right: 14px; }
           /* line 105, /Users/robisenberg/dev/projects/naomi_grant/naomi_grant/source/css/app.css.scss */
           body header nav ul li a {
             color: #ddd;
