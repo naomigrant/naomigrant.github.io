@@ -1,0 +1,22 @@
+---
+title: Figures
+page_ref: figures
+images:
+  -
+    filename: figures/italian_peasant_i
+    caption: Italian Peasant I
+    orientation: portrait
+  - 
+    filename: figures/italian_peasant_ii
+    caption: Italian Peasant II
+    orientation: portrait
+---
+<section id="<%= current_page.data.page_ref %>">
+  <h1><%= current_page.data.title %></h1>
+  <div class="popup-gallery">
+    <% current_page.data.images.each do |img| %>
+      <%= link_to image_tag(img['filename'] + '_small.jpg', class: img['orientation']), 
+      'img/' + img['filename'] + '_large.jpg', class: 'swipebox', title: img['caption'] %>
+    <% end %>
+  </div>
+</section>
