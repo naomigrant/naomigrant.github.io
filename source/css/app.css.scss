@@ -4,7 +4,6 @@
 
 body#page-home {
   background: #454345;
-  header { background: #454345; }
 
   #main {
     .wrapper {
@@ -18,7 +17,6 @@ body#page-home {
 
 body#page-self-portraits {
   background: #454345;
-  header { background: #454345; }
 
   #main {
     .wrapper {
@@ -32,7 +30,6 @@ body#page-self-portraits {
 
 body#page-still-lifes {
   background: #454345;
-  header { background: #454345; }
 
   #main {
     .wrapper {
@@ -52,7 +49,6 @@ body#about {
 
 body#page-landscapes {
   background: #454345;
-  header { background: #454345; }
 
   #main {
     .wrapper {
@@ -118,6 +114,8 @@ body {
 
     header { 
       background: rgba(34, 48, 51, 0.9);
+      //       background: rgba(17, 34, 37, 0.9);
+
       width: 100%;
       min-height: 80px;
       color: #ddd;
@@ -176,7 +174,7 @@ body {
 
           li.selected a,
           li a:hover {
-            background: #333;
+            background: rgba(0,0,0, 0.1);
           }
 
           li {
