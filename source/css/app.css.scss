@@ -4,32 +4,42 @@
 
 body#page-home {
   background: #454345;
+  header { background: #454345; }
 
   #main {
-    background: #605e60;
-    h1, h2 {
-      color: #c1c1c1;
+    .wrapper {
+      background: #605e60;
+      h1, h2 {
+        color: #c1c1c1;
+      }
     }
   }
 }
 
 body#page-self-portraits {
   background: #454345;
+  header { background: #454345; }
 
   #main {
-    background: #605e60;
-    h1, h2 {
-      color: #c1c1c1;
+    .wrapper {
+      background: #605e60;
+      h1, h2 {
+        color: #c1c1c1;
+      }
     }
   }
 }
 
 body#page-still-lifes {
   background: #454345;
+  header { background: #454345; }
+
   #main {
-    background: #717e84;
-    h1, h2 {
-      color: #f0f0f0;
+    .wrapper {
+      background: #717e84;
+      h1, h2 {
+        color: #f0f0f0;
+      }
     }
   }
 }
@@ -42,10 +52,38 @@ body#about {
 
 body#page-landscapes {
   background: #454345;
+  header { background: #454345; }
+
   #main {
-    background: #464c4d;
-    h1, h2 {
-      color: #c1c1c1;
+    .wrapper {
+      background: #464c4d;
+      h1, h2 {
+        color: #c1c1c1;
+      }
+    }
+  }
+}
+
+
+// slideout.js hidden slideout menu
+#menu {
+  background: rgb(37, 51, 54);
+
+  @media (min-width: 1001px) { display: none; }
+
+  ul {
+    padding: 0;
+
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 1em;
+      display: block;
+      border-bottom: 1px solid rgb(48,60,65);
+    }
+
+    a:hover {
+      background-color: rgb(59, 71, 75);
     }
   }
 }
@@ -53,177 +91,263 @@ body#page-landscapes {
 
 body {
   background: #364246;
-
   margin: 0;
   color: #555;
   font-family: "chaparral-pro";
+  
+  #main {
+    // shadow to make slideout appear under main page
+    -webkit-box-shadow: -3px 0px 22px -1px rgba(0,0,0,0.5);
+    -moz-box-shadow: -3px 0px 22px -1px rgba(0,0,0,0.5);
+    box-shadow: -3px 0px 22px -1px rgba(0,0,0,0.5);
 
-  header {
-    width: 100%;
-    min-height: 80px;
-    color: #ddd;
-
-    .centred {
-      width: 80%;
-      margin: 0 auto;
-      padding-top: 15px;
+    header.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index:10;
+      transition: transform 300ms ease;
     }
 
-    h1 {
-      font-size: 32px;
-      font-family: "chaparral-pro";
-      font-weight: normal;
-      color: white;
-      margin: 0 35px 0 0;
-      padding-top: 3px;
-      float: left;
+    header.fixed-open {
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        // fix fixed header issue on IE10+ CSS styles go here
+        transform: translate3d(256px, 0px, 0px);
+      }
     }
 
-    nav {
-      margin-top: 6px;
-      float: left;
-      @media (min-width: 825px) {  }
-      @media (max-width: 824px) { width: 100%; }
+    header { 
+      background: rgba(34, 48, 51, 0.9);
+      width: 100%;
+      min-height: 80px;
+      color: #ddd;
 
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+      .centred {
+        @media (min-width: 1001px) { width: 80%; }
+        @media (max-width: 1000px) { margin-left: 30px; }
+        margin: 0 auto;
+        padding-top: 15px;
+      }
 
-        li.selected a,
-        li a:hover {
-          background: #333;
+      #logo-area {
+        float: left;
+        @media (min-width: 725px) { width: 180px; }
+        @media (max-width: 724px) { width: 100%; }
+
+        nav {
+          @media (min-width: 725px) { display: none; }
+          @media (max-width: 724px) { display: inline-block; }
+          float: left;
+          margin-top: 11px;
+
+          a#hamburger-button {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 5px 7px 1px 7px;
+            font-size: 21px;
+            border-radius: 4px;
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+          }
         }
 
-        li {
-          display: block;
-          float: left;
-          padding: .6em 0;
-          margin-right: 14px;
+        h1 {
+          @media (max-width: 724px) { display: inline-block; }
 
-          a {
-            color: #ddd;
-            text-decoration: none;
-            padding: .6em .7em;
-            font-size: 17px;
+          font-size: 32px;
+          font-family: "chaparral-pro";
+          font-weight: normal;
+          color: white;
+          margin: 0;
+          padding-top: 3px;
+        }
+      }
+
+      nav.main-menu {
+        margin-top: 6px;
+        margin-left: 215px;
+
+        @media (max-width: 724px) { display: none; }
+
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          li.selected a,
+          li a:hover {
+            background: #333;
           }
 
+          li {
+            display: block;
+            float: left;
+            padding: .6em 0;
+            margin-right: 14px;
+
+            a {
+              color: #ddd;
+              text-decoration: none;
+              padding: .6em .7em;
+              font-size: 17px;
+            }
+
+          }
         }
+      }
+    }
+
+    .wrapper {
+      background: #e5e5e5;
+      padding-top: 80px;
+
+      .content {
+        width: 80%;
+        margin: 0 auto;
+        padding: 34px 0 150px 0;
+      }
+
+
+      .centered {
+        min-height: 400px;
+        margin-top: 16px;
+        text-align: center;
+
+        img { 
+          @media (min-width: 601px) { width: 600px; }
+          @media (max-width: 600px) { width: 100%; }
+        }
+      }
+      .large { font-size: 1.2em; }
+
+      a,
+      a:hover {
+        color: #555;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      img {
+        box-shadow: 0px 0px 30px rgba(0,0,0,.4);
+        margin: 3% 1%;
+      }
+
+      img.landscape {
+        @media (min-width: 321px) { width: 240px; }
+        @media (max-width: 320px) { width: 100%; }
+      }
+
+      img.portrait {
+        @media (min-width: 321px) { height: 300px; }
+        @media (max-width: 320px) { width: 100%; }
+      }
+
+      h1, h2 {
+        color: #444;
+        text-align: center;
+        font-weight: normal;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 17px;
+      }
+
+      ul.top_level {
+        padding-left: 0;
+        position: relative;
+
+        li {
+          .item {
+            font-size: 19px;
+            font-weight: bold;
+          }
+          .value {
+            position: absolute;
+            left: 15%;
+            top: 4px;
+          }
+        }
+      }
+
+      ul {
+        padding-left: 15%;
+        list-style: none;
+        margin-bottom: 5%;
+
+
+        li {
+          list-style-type: none;
+          margin: 15px 0;
+
+          .date {
+            width: 150x;
+            float: left;
+            margin-right: 5%;
+          }
+
+          .address {
+            float: left;
+          }
+        }
+      }
+
+    }
+
+
+    footer {
+      background: rgba(34, 48, 51, 0.9);
+
+      width: 100%;
+      min-height: 50px;
+      color: #ddd;
+
+      .centred {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 15px;
       }
     }
   }
-
-  #main {
-    background: #e5e5e5;
-
-    .content {
-      width: 80%;
-      margin: 0 auto;
-      padding: 34px 0 150px 0;
-    }
+}
 
 
-    .centered {
-      margin-top: 16px;
-      text-align: center;
+// slide.js styles
+body {
+  width: 100%;
+  height: 100%;
+}
 
-      img { 
-        @media (min-width: 601px) { width: 600px; }
-        @media (max-width: 600px) { width: 100%; }
-      }
-    }
-    .large { font-size: 1.2em; }
+.slideout-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 256px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+}
 
-    a,
-    a:hover {
-      color: #555;
-      text-decoration: none;
-    }
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
 
-    img {
-      box-shadow: 0px 0px 30px rgba(0,0,0,.4);
-      margin: 3% 1%;
-    }
-
-    img.landscape {
-      @media (min-width: 321px) { width: 240px; }
-      @media (max-width: 320px) { width: 100%; }
-    }
-
-    img.portrait {
-      @media (min-width: 321px) { height: 300px; }
-      @media (max-width: 320px) { width: 100%; }
-    }
-
-    h1, h2 {
-      color: #444;
-      text-align: center;
-      font-weight: normal;
-    }
-
-    h1 {
-      font-size: 24px;
-    }
-
-    h2 {
-      font-size: 17px;
-    }
-
-    ul.top_level {
-      padding-left: 0;
-      position: relative;
-
-      li {
-        .item {
-          font-size: 19px;
-          font-weight: bold;
-        }
-        .value {
-          position: absolute;
-          left: 15%;
-          top: 4px;
-        }
-      }
-    }
-
-    ul {
-      padding-left: 15%;
-      list-style: none;
-      margin-bottom: 5%;
-
-
-      li {
-        list-style-type: none;
-        margin: 15px 0;
-
-        .date {
-          width: 150x;
-          float: left;
-          margin-right: 5%;
-        }
-
-        .address {
-          float: left;
-        }
-      }
-    }
-
-  }
-
-
-  footer {
-    width: 100%;
-    min-height: 50px;
-    color: #ddd;
-
-    .centred {
-      width: 80%;
-      margin: 0 auto;
-      padding-top: 15px;
-    }
-  }
+.slideout-open .slideout-menu {
+  display: block;
 }

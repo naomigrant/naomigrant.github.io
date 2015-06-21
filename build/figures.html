@@ -34,42 +34,62 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-      <header>
-        <section class="centred clearfix">
-          <h1>Naomi Grant</h1>
-          <nav class="clearfix">
-            <ul>
-              <li ><a href="/">Home</a></li>
-              <li ><a href="/landscapes.html">Landscapes</a></li>
-              <li ><a href="/self-portraits.html">Self-Portraits</a></li>
-              <li class="selected"><a href="/figures.html">Figures</a></li>
-              <li ><a href="/still-lifes.html">Still Lifes</a></li>
-              <li ><a href="/printmaking.html">Printmaking</a></li>
-              <li ><a href="/bio.html">Bio</a></li>
-              <li ><a href="/contact.html">Contact</a></li>
-            </ul>
-          </nav>
-        </section>
-      </header>
+      <nav id="menu" class="clearfix">
+        <ul>
+          <li ><a href="/">Home</a></li>
+          <li ><a href="/landscapes.html">Landscapes</a></li>
+          <li ><a href="/self-portraits.html">Self-Portraits</a></li>
+          <li class="selected"><a href="/figures.html">Figures</a></li>
+          <li ><a href="/still-lifes.html">Still Lifes</a></li>
+          <li ><a href="/printmaking.html">Printmaking</a></li>
+          <li ><a href="/bio.html">Bio</a></li>
+          <li ><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
 
       <div id="main" role="main">
-        <div class="content">
-          <section id="figures">
+        <header class="fixed clearfix">
+          <div class="centred">
+            <div id="logo-area" class="fixed clearfix">
+              <nav id="slide-button">
+                <a id="hamburger-button" href="#">☰</a>
+              </nav>
+              <h1>Naomi Grant</h1>
+            </div>
+            <nav class="main-menu clearfix">
+              <ul class="clearfix">
+                <li ><a href="/">Home</a></li>
+                <li ><a href="/landscapes.html">Landscapes</a></li>
+                <li ><a href="/self-portraits.html">Self-Portraits</a></li>
+                <li ><a href="/figures.html">Figures</a></li>
+                <li ><a href="/still-lifes.html">Still Lifes</a></li>
+                <li ><a href="/printmaking.html">Printmaking</a></li>
+                <li ><a href="/bio.html">Bio</a></li>
+                <li ><a href="/contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        <div class="wrapper">
+          <div class="content">
+            <section id="figures">
   <h1>Figures</h1>
   <div class="popup-gallery">
       <a class="swipebox" title="Italian Peasant I" href="/img/figures/italian_peasant_i_large.jpg"><img class="portrait" src="/img/figures/italian_peasant_i_small.jpg" /></a>
       <a class="swipebox" title="Italian Peasant II" href="/img/figures/italian_peasant_ii_large.jpg"><img class="portrait" src="/img/figures/italian_peasant_ii_small.jpg" /></a>
   </div>
 </section>
+          </div>
         </div>
-      </div>
 
-      <footer>
-        <div class="centred">
-          &copy; Naomi Grant
-        </div>
-      </footer>
+        <footer>
+          <div class="centred">
+            &copy; Naomi Grant
+          </div>
+        </footer>
+      </div>
 
 
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
@@ -78,6 +98,39 @@
       <script src="js/vendor/jquery.magnific-popup.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
+
+      <script src="js/vendor/slideout.min.js"></script>
+      <script>
+
+        $(function() {
+
+          var slideout = new Slideout({
+            'panel': document.getElementById('main'),
+            'menu': document.getElementById('menu'),
+            'padding': 256,
+            'tolerance': 70
+          });
+
+          $('#hamburger-button').click(function() {
+            slideout.toggle();
+          });
+
+          $(window).resize(function() {
+            if (slideout.isOpen() && $(window).width() > 1000) {
+              slideout.close();
+            }
+          });
+
+          slideout.on('beforeopen', function() {
+            document.querySelector('.fixed').className += ' fixed-open';
+          });
+
+          slideout.on('beforeclose', function() {
+            document.querySelector('.fixed').className = 'fixed';
+          });
+
+        });
+      </script>
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
       <script>
